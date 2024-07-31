@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Encriptador de Texto</title>
+  </head>
+  <body>
+    <!-- Encabezado del sitio -->
+    <header>
+      <!-- Enlace de inicio con el logo -->
+      <a href="#"><img src="img/logo.svg" alt="Logo Alura" /></a>
+      <h1 class="titulo">Empieza a encriptar tus mensajes de manera seguro</h1>
+    </header>
+    <!-- Fin del encabezado -->
+
+    <!-- Sección principal de la página -->
+    <main>
+      <!-- Sección para el encriptador de texto -->
+      <section class="encriptador-section">
+        <!-- Área de texto para ingresar el texto a encriptar -->
+        <textarea
+          class="texto-encriptar"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+
+        <!-- Mensaje de aviso sobre las restricciones del texto -->
+        <div class="encriptador-aviso">
+          <img src="img/aviso.svg" alt="Imagen Aviso" class="img-aviso" />
+          <p class="texto-aviso">Solo letras minúsculas y sin acentos</p>
+        </div>
+
+        <!-- Botones para encriptar y desencriptar el texto -->
+        <div class="encriptador-btn">
+          <button type="button" class="btn-encriptar" onclick="btnEncriptar()">
+            Encriptar
+          </button>
+          <button
+            type="button"
+            class="btn-desencriptar"
+            onclick="btnDesencriptar()"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <!-- Sección para mostrar los resultados -->
+      <section class="tarjeta">
+        <div class="tarjeta-contenedor">
+          <img src="img/muñeco.svg" alt="Imagen Muñeco" class="img-muneco" />
+          <p class="texto-uno">Ningún mensaje fue encontrado</p>
+          <p class="texto-dos">
+            Ingrese el texto que deseas encriptar o desencriptar
+          </p>
+        </div>
+        <!-- Área de texto para mostrar el resultado -->
+        <textarea class="resultado" readonly></textarea>
+        <!-- Botón para copiar el resultado al portapapeles -->
+        <button type="button" class="btn-copiar" onclick="btnCopiar()">
+          Copiar
+        </button>
+      </section>
+    </main>
+    <!-- Fin de la sección principal -->
+
+    <!-- Pie de página del sitio -->
+    <footer>
+      <p class="copyright">
+        &copy; 2024 - Desarrollado con ❤️ por Jean Woodley Bolivard
+      </p>
+      <!-- Enlace al perfil de LinkedIn -->
+      <a
+        href="https://www.linkedin.com/in/jeanwoodleybolivard/"
+        target="_blank"
+        aria-label="Perfil de LinkedIn"
+      >
+        <img src="img/linkedin.svg" alt="Logo LinkedIn" class="linked" />
+      </a>
+      <!-- Enlace al perfil de GitHub -->
+      <a
+        href="https://github.com/jwoodleybolivard"
+        target="_blank"
+        aria-label="Perfil de GitHub"
+      >
+        <img src="img/github.svg" alt="Logo GitHub" class="git" />
+      </a>
+    </footer>
+    <!-- Fin del pie de página -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

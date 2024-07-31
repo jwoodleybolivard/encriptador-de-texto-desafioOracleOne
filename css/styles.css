@@ -1,0 +1,415 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+/* Importa la fuente Inter desde Google Fonts */
+
+/* Global Css */
+:root {
+  /* Definición de variables de colores para uso global */
+  --font: #e5e5e5;
+  --White: #ffffff;
+  --Dark-Blue: #0a3871;
+  --Greey: #c5c5c5;
+  --Medium-Gray: #67808e;
+  --RGBA: rgba(0, 0, 0, 0.08);
+  --White-Blue: #d8dfe8;
+  --Medium-Blue: #0a38718a;
+  --Gray: #343a40;
+  --Gree: #495057;
+}
+
+/* Resetear los elementos de mi html */
+* {
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el relleno por defecto */
+  box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total del elemento */
+  font-family: "Inter", sans-serif; /* Define la fuente para todo el documento */
+  text-decoration: none; /* Elimina el subrayado de los enlaces por defecto */
+}
+
+::selection {
+  background: var(--Dark-Blue); /* Color de fondo para el texto seleccionado */
+  color: var(--White); /* Color del texto seleccionado */
+}
+
+html,
+body {
+  height: 100%; /* Asegura que html y body ocupen el 100% de la altura del viewport * /
+  margin: 0; /* Elimina el margen por defecto del body */
+  padding: 0; /* Elimina el padding por defecto del body */
+  background: url(../img/fondo-abstracto-codigo-binario.jpg) no-repeat center
+    center fixed; /* Establece la imagen de fondo centrada y fija */
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+}
+
+img {
+  max-width: 100%; /* Asegura que las imágenes no excedan el ancho de su contenedor */
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  position: absolute; /* Posiciona el encabezado de manera absoluta respecto al contenedor */
+  margin: 40px 0px 0px 40px; /* Establece los márgenes para el encabezado */
+  background: transparent; /* Define un fondo transparente para el header */
+}
+
+header a,
+header a img {
+  margin-right: 10px;
+  background: transparent;
+  filter: hue-rotate(60deg) brightness(500%); /* Cambiar el color de la imagen */
+}
+
+header h1 {
+  background: transparent; /* Define un fondo transparente para el texto */
+  color: #e5e5e5;
+}
+
+/* Principal */
+main {
+  display: flex; /* Utiliza flexbox para el diseño */
+  flex-direction: row; /* Organiza los elementos en fila */
+  background: transparent;
+}
+
+.encriptador-section {
+  width: 60%; /* Define el ancho de la sección del encriptador */
+  margin: 168px 0px 0px 140px; /* Establece los márgenes para la sección del encriptador */
+  background: transparent; /* Define un fondo transparente para la sección */
+}
+
+.texto-encriptar {
+  width: 660px; /* Define el ancho del área de texto */
+  height: 288px; /* Define la altura del área de texto */
+  font-weight: 400; /* Define el peso de la fuente */
+  font-size: 32px; /* Define el tamaño de la fuente */
+  line-height: 48px; /* Define la altura de línea del texto */
+  outline: none; /* Elimina el contorno por defecto al enfocar el área de texto */
+  border: 1px solid var(--Greey); /* Define el borde del área de texto */
+  border-radius: 15px; /* Redondea las esquinas del área de texto */
+  resize: none; /* Elimina la capacidad de redimensionar el área de texto */
+}
+
+.texto-encriptar::placeholder,
+:focus {
+  color: var(
+    --Dark-Blue
+  ); /* Define el color del texto del placeholder y al enfocar el área de texto */
+}
+
+.encriptador-aviso {
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  flex-direction: row; /* Organiza los elementos en fila */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
+  padding: 0; /* Elimina el relleno */
+  gap: 8px; /* Define el espacio entre los elementos */
+  position: absolute; /* Posiciona el aviso de manera absoluta respecto al contenedor */
+  top: 455px; /* Define la posición desde el borde superior del contenedor */
+  background: transparent; /* Define un fondo transparente para el texto */
+}
+
+.encriptador-aviso img {
+  background: transparent; /* Define un fondo transparente para el la imagen del aviso */
+}
+
+.texto-aviso {
+  width: 100%; /* Define el ancho del texto del aviso */
+  font-style: normal; /* Define el estilo de la fuente */
+  font-weight: 400; /* Define el peso de la fuente */
+  font-size: 18px; /* Define el tamaño de la fuente */
+  line-height: 150%; /* Define la altura de línea del texto */
+  opacity: 0.8; /* Define la opacidad del texto */
+  color: var(--White); /* Define el color del texto */
+  background: transparent; /* Define un fondo transparente para el texto */
+}
+
+.encriptador-btn {
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  flex-direction: row; /* Organiza los botones en fila */
+  align-items: flex-start; /* Alinea los botones al principio del contenedor */
+  gap: 8px; /* Define el espacio entre los botones */
+  position: absolute; /* Posiciona los botones de manera absoluta respecto al contenedor */
+  top: 526px; /* Define la posición desde el borde superior del contenedor */
+  background: transparent; /* Define un fondo transparente para los 2 botones */
+}
+
+.btn-encriptar {
+  width: 328px; /* Define el ancho del botón de encriptar */
+  height: 67px; /* Define la altura del botón de encriptar */
+  padding: 24px; /* Define el relleno del botón de encriptar */
+  font-style: normal; /* Define el estilo de la fuente */
+  font-weight: 400; /* Define el peso de la fuente */
+  font-size: 25px; /* Define el tamaño de la fuente */
+  line-height: 19%; /* Define la altura de línea del texto del botón */
+  text-align: center; /* Centra el texto dentro del botón */
+  color: var(--White); /* Define el color del texto del botón */
+  background: var(--Dark-Blue); /* Define el color de fondo del botón */
+  border: 1px solid var(--Dark-Blue); /* Define el borde del botón */
+  border-radius: 24px; /* Redondea las esquinas del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  box-shadow: 0px 20px 29px -5px var(--RGBA); /* Añade una sombra al botón */
+}
+
+.btn-encriptar:active {
+  box-shadow: inset 2px 2px 4px var(--font),
+    /* Cambia la sombra al hacer clic en el botón */ inset -3px -4px 8px
+      var(--Dark-Blue);
+  color: var(--White-Blue); /* Cambia el color del texto al hacer clic */
+}
+
+.btn-desencriptar {
+  width: 328px; /* Define el ancho del botón de desencriptar */
+  height: 67px; /* Define la altura del botón de desencriptar */
+  padding: 24px; /* Define el relleno del botón de desencriptar */
+  font-style: normal; /* Define el estilo de la fuente */
+  font-weight: 400; /* Define el peso de la fuente */
+  font-size: 25px; /* Define el tamaño de la fuente */
+  line-height: 19%; /* Define la altura de línea del texto del botón */
+  text-align: center; /* Centra el texto dentro del botón */
+  color: var(--Dark-Blue); /* Define el color del texto del botón */
+  background: var(--White-Blue); /* Define el color de fondo del botón */
+  border: 1px solid var(--Dark-Blue); /* Define el borde del botón */
+  border-radius: 24px; /* Redondea las esquinas del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  box-shadow: 0px 20px 29px -5px var(--RGBA); /* Añade una sombra al botón */
+}
+
+.btn-copiar:active,
+.btn-desencriptar:active {
+  box-shadow: inset 2px 2px 4px var(--Dark-Blue),
+    /* Cambia la sombra al hacer clic en el botón */ inset -3px -4px 8px
+      var(--font);
+  color: var(--Medium-Blue); /* Cambia el color del texto al hacer clic */
+}
+
+.tarjeta {
+  width: 270px; /* Define el ancho de la tarjeta */
+  height: 580px; /* Define la altura de la tarjeta */
+  background: var(--font); /* Define el color de fondo de la tarjeta */
+  box-shadow: 10px 24px 32px -8px var(--Gray); /* Añade una sombra a la tarjeta */
+  position: relative; /* Define la posición relativa de la tarjeta para posicionar elementos internos */
+  margin-top: 40px; /* Define el margen superior de la tarjeta */
+  border-radius: 32px; /* Redondea las esquinas de la tarjeta */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+.tarjeta-contenedor {
+  width: 250px; /* Define el ancho del contenedor dentro de la tarjeta */
+  margin: auto; /* Centra el contenedor horizontalmente */
+  margin-top: 50px; /* Define el margen superior del contenedor */
+  background: var(--font); /* Define el color de fondo del contenedor */
+}
+
+.img-muneco {
+  background: var(
+    --font
+  ); /* Define el color de fondo de la imagen del muñeco */
+}
+
+.texto-uno {
+  font-style: normal; /* Define el estilo de la fuente */
+  font-weight: 700; /* Define el peso de la fuente */
+  font-size: 18px; /* Define el tamaño de la fuente */
+  line-height: 120%; /* Define la altura de línea del texto */
+  text-align: center; /* Centra el texto */
+  color: var(--Gray); /* Define el color del texto */
+  background: var(--font); /* Define el color de fondo del texto */
+}
+
+.texto-dos {
+  font-style: normal; /* Define el estilo de la fuente */
+  font-weight: 400; /* Define el peso de la fuente */
+  font-size: 12px; /* Define el tamaño de la fuente */
+  line-height: 150%; /* Define la altura de línea del texto */
+  text-align: center; /* Centra el texto */
+  color: var(--Medium-Gray); /* Define el color del texto */
+  background: var(--font); /* Define el color de fondo del texto */
+}
+
+.resultado {
+  width: 100%; /* Define el ancho del área de resultado */
+  height: 485px; /* Define la altura del área de resultado */
+  position: absolute; /* Posiciona el área de resultado de manera absoluta dentro del contenedor */
+  padding: 20px; /* Define el relleno del área de resultado */
+  top: 0; /* Posiciona el área de resultado en la parte superior del contenedor */
+  left: 0; /* Posiciona el área de resultado en la parte izquierda del contenedor */
+  font-weight: 400; /* Define el peso de la fuente */
+  font-size: 24px; /* Define el tamaño de la fuente */
+  line-height: 36px; /* Define la altura de línea del texto */
+  color: var(--Gree); /* Define el color del texto */
+  background: transparent; /* Define un fondo transparente para el área de resultado */
+  border-top-right-radius: 32px; /* Redondea la esquina superior derecha del área de resultado */
+  border-top-left-radius: 32px; /* Redondea la esquina superior izquierda del área de resultado */
+  border: none; /* Elimina el borde del área de resultado */
+  resize: none; /* Elimina la capacidad de redimensionar el área de resultado */
+}
+
+.resultado:focus {
+  outline: none; /* Elimina el contorno por defecto al enfocar el área de resultado */
+}
+
+.btn-copiar {
+  width: 224px; /* Define el ancho del botón de copiar */
+  height: 67px; /* Define la altura del botón de copiar */
+  margin: 23px; /* Define el margen del botón de copiar */
+  position: absolute; /* Posiciona el botón de copiar de manera absoluta dentro del contenedor */
+  bottom: 0; /* Posiciona el botón en la parte inferior del contenedor */
+  left: 0; /* Posiciona el botón en la parte izquierda del contenedor */
+  visibility: hidden; /* Oculta el botón por defecto */
+  padding: 24px; /* Define el relleno del botón de copiar */
+  font-size: 16px; /* Define el tamaño de la fuente del botón */
+  line-height: 19px; /* Define la altura de línea del texto del botón */
+  text-align: center; /* Centra el texto dentro del botón */
+  background: var(--White-Blue); /* Define el color de fondo del botón */
+  border: 1px solid var(--Dark-Blue); /* Define el borde del botón */
+  border-radius: 20px; /* Redondea las esquinas del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar:hover {
+  transform: scale(
+    0.97
+  ); /* Reduce ligeramente el tamaño del botón al pasar sobre él */
+}
+
+/* Footer */
+footer {
+  margin-top: 20px; /* Define el margen superior del pie de página */
+  padding: 10px; /* Define el relleno del pie de página */
+  color: var(--Gray); /* Define el color del texto en el pie de página */
+  text-align: center; /* Centra el texto en el pie de página */
+  font-size: 20px; /* Define el tamaño de la fuente en el pie de página */
+  font-weight: 700; /* Define el peso de la fuente en el pie de página */
+  background: transparent;
+}
+
+footer a,
+footer p {
+  background: transparent;
+  color: var(--White);
+}
+
+footer a img {
+  border-radius: 10px;
+  margin: 10px;
+  background: var(--White);
+}
+
+.linked:hover {
+  color: var(
+    --font
+  ); /* Cambia el color del icono de LinkedIn al pasar sobre él */
+  opacity: 0.8; /* Cambia la opacidad del icono de LinkedIn al pasar sobre él */
+}
+
+.git:hover {
+  color: var(
+    --font
+  ); /* Cambia el color del icono de GitHub al pasar sobre él */
+  opacity: 0.6; /* Cambia la opacidad del icono de GitHub al pasar sobre él */
+}
+
+/* Media Query */
+
+/* Para pantallas con un ancho máximo de 1250px */
+@media (max-width: 1250px) {
+  main {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenedor principal a columna */
+    align-items: center; /* Centra los elementos dentro del contenedor principal */
+    width: 100%; /* Define el ancho del contenedor principal al 100% */
+  }
+
+  .encriptador-section {
+    margin: 168px 0px 0px 0px; /* Ajusta el margen de la sección del encriptador */
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    width: 100%; /* Define el ancho al 100% */
+  }
+
+  .encriptador-btn {
+    display: flex;
+    align-items: center; /* Centra los botones verticalmente */
+    position: inherit; /* Elimina la posición absoluta */
+  }
+
+  .encriptador-aviso {
+    position: inherit; /* Elimina la posición absoluta */
+    margin: 5px 0px 30px 0px; /* Ajusta el margen del aviso */
+  }
+
+  .tarjeta {
+    width: 665px; /* Ajusta el ancho de la tarjeta para pantallas más pequeñas */
+    height: 300px; /* Ajusta la altura de la tarjeta */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro de la tarjeta */
+    align-items: flex-end; /* Alinea el contenido al final de la tarjeta */
+  }
+
+  .tarjeta-contenedor {
+    display: block; /* Cambia la visualización del contenedor a bloque */
+    justify-content: center; /* Centra el contenido dentro del contenedor */
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    width: 100%; /* Define el ancho del contenedor al 100% */
+    position: absolute; /* Posiciona el contenedor de manera absoluta dentro de la tarjeta */
+    bottom: 20%; /* Posiciona el contenedor al 20% desde la parte inferior de la tarjeta */
+    font-size: 24px; /* Define el tamaño de la fuente en el contenedor */
+    font-weight: 700; /* Define el peso de la fuente en el contenedor */
+    margin-top: 0px;
+  }
+
+  .img-muneco {
+    display: none; /* Oculta la imagen del muñeco en pantallas pequeñas */
+  }
+
+  .btn-copiar {
+    position: inherit; /* Elimina la posición absoluta del botón de copiar */
+    width: 100%; /* Define el ancho del botón al 100% */
+  }
+
+  .resultado {
+    width: 100%; /* Define el ancho del área de resultado al 100% */
+    height: 210px; /* Ajusta la altura del área de resultado para pantallas más pequeñas */
+    padding: 10px; /* Ajusta el relleno del área de resultado */
+  }
+}
+
+/* Para pantallas con un ancho máximo de 720px */
+@media (max-width: 720px) {
+  header {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .encriptador-section {
+    margin-top: 60px;
+  }
+
+  .texto-encriptar {
+    width: 90%; /* Ajusta el ancho del área de texto al 90% */
+    font-size: 24px; /* Ajusta el tamaño de la fuente en el área de texto */
+  }
+
+  .encriptador-btn {
+    display: grid; /* Cambia la visualización de los botones a una cuadrícula */
+    gap: 21px; /* Define el espacio entre los botones */
+  }
+
+  .tarjeta {
+    width: 90%; /* Ajusta el ancho de la tarjeta al 90% */
+  }
+
+  .tarjeta-contenedor {
+    margin-top: 0px;
+  }
+
+  .copyright {
+    font-size: 20px; /* Ajusta el tamaño de la fuente en el pie de página */
+  }
+}
