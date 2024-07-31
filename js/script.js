@@ -97,6 +97,8 @@ btnCopiar.addEventListener('click', e => {
         btnCopiar.style.visibility = 'hidden';
         btnCopiar.style.backgroundColor = ''; // Restaurar el color de fondo original
         btnCopiar.textContent = 'Copiar'; // Restaurar el texto original del botón
+        btnCopiar.style.fontWeight = '';
+        btnCopiar.style.color = '';
         resultado.value = '';
         contenido.style.display = 'block';
     }, 3000); // Cambiar el aviso después de 3 segundos
