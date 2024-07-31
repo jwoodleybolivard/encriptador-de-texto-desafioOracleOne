@@ -78,6 +78,11 @@ btnDesencriptar.addEventListener('click', e => {
     }
 });
 
+// Almacenar los estilos originales del botón
+const originalColor = getComputedStyle(btnCopiar).color;
+const originalBackgroundColor = getComputedStyle(btnCopiar).backgroundColor;
+const originalFontWeight = getComputedStyle(btnCopiar).fontWeight;
+
 // Evento Botón Copiar
 btnCopiar.addEventListener('click', e => {
     e.preventDefault();
@@ -89,22 +94,17 @@ btnCopiar.addEventListener('click', e => {
     // Mostrar el aviso en el botón
     btnCopiar.textContent = 'Texto copiado';
     btnCopiar.style.fontWeight = '600';
-    btnCopiar.style.color = '#ffffff';
-    btnCopiar.style.backgroundColor = '#0a3871';
+    btnCopiar.style.color = '#ffffff'; // Color de texto del aviso
+    btnCopiar.style.backgroundColor = '#0a3871'; // Color de fondo del aviso
 
     // Configurar el parpadeo del aviso
     setTimeout(() => {
-        btnCopiar.style.visibility = 'hidden';
-        btnCopiar.style.backgroundColor = ''; // Restaurar el color de fondo original
+        btnCopiar.style.visibility = 'hidden'; // Ocultar el botón
+        btnCopiar.style.color = originalColor; // Restaurar el color de texto original
+        btnCopiar.style.backgroundColor = originalBackgroundColor; // Restaurar el color de fondo original
+        btnCopiar.style.fontWeight = originalFontWeight; // Restaurar el peso de la fuente original
         btnCopiar.textContent = 'Copiar'; // Restaurar el texto original del botón
-        btnCopiar.style.fontWeight = '';
-        btnCopiar.style.color = '';
-        resultado.value = '';
-        contenido.style.display = 'block';
-    }, 3000); // Cambiar el aviso después de 3 segundos
-
-    // Ocultar el texto copiado
-
-
-    // Restaurar el contenido y mostrarlo
+        resultado.value = ''; // Limpiar el área de texto
+        contenido.style.display = 'block'; // Mostrar el contenido
+    }, 3000); // Restaurar después de 3 segundos
 });
